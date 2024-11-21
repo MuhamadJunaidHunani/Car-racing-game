@@ -10,9 +10,21 @@
 </head>
 
 <body>
+  <div class="mainCont">
+    <audio id="engineSound" loop>
+      <source src="engine-sound.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+  </audio>
+    <div class="controlCont">
+      <h1 class="speedMeter"></h1>
+      <h1 class="distanceMeter"></h1>
+    </div>
+
   <div id="gameArea">
     <div id="playerCar" class="car"></div>
   </div>
+</div>
+
   <script src="script.js"></script>
 </body>
 
