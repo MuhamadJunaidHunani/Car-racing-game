@@ -1,0 +1,28 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  background: #333;
+}
+
+#gameArea {
+  position: relative;
+  width: 400px;
+  height: 600px;
+  margin: 0 auto;
+  overflow: hidden;
+  background: url('./images/road.jpg') repeat-y; 
+}
+
+.car {
+  position: absolute;
+  width: 50px;
+  height: 100px;
+  background: url('./images/car.png') no-repeat center center / cover; 
+}
+
+.enemy {
+  position: absolute;
+  width: 50px;
+  height: 100px;
+  background: blue; 
+}
