@@ -1,25 +1,26 @@
 const gameArea = document.getElementById("gameArea");
 const playerCar = document.getElementById("playerCar");
 const distanceMeter = document.querySelector(".distanceMeter");
+const speedMeter = document.querySelector(".speedMeter");
 
 let roadSpeed = 3;
 let maxSpeed = 30;
 let minSpeed = 3;
 let distance = 0;
-console.log(gameArea.offsetHeight);
+let roadPosition = 0;
+let lastTimestamp = performance.now();
+
 
 const car = {
   x: gameArea.offsetWidth / 2 - 25,
   y: gameArea.offsetHeight - 120,
   moveSpeed: 5,
 };
-
 const keys = {};
 const enemyCars = [];
 const enemyCarWidth = 30;
 const enemyCarHeight = 60;
 
-let roadPosition = 0;
 
 document.addEventListener("keydown", (e) => {
   keys[e.key] = true;
@@ -100,34 +101,26 @@ function handleSpeedDecay() {
     roadSpeed -= 0.01;
   }
 }
-let lastTimestamp = performance.now();
-const speedMeter = document.querySelector(".speedMeter");
+
 function updateDistance(currentTimestamp) {
   const elapsedTime = (currentTimestamp - lastTimestamp) / 1000 ||0;
   lastTimestamp = currentTimestamp;
-
-
   distance += roadSpeed * (1000 / 3600) * elapsedTime;
-
-
-
-}
-function gameLoop(currentTimestamp) {
   speedMeter.innerHTML = `${Math.round(roadSpeed * 10)} kmh`;
   distanceMeter.innerHTML = `${distance.toFixed(2)} m`;
+}
+
+
+function gameLoop(currentTimestamp) {
   updateDistance(currentTimestamp)
   adjustMovement();
   handleSpeedDecay();
   updateRoad();
   updateEnemyCars();
 
-
-
   if (checkCollision()) {
     roadSpeed = 0;
   }
-
-
   if (Math.random() < 0.01 && roadSpeed > 2) {
     createEnemyCar();
   }
