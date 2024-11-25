@@ -1,4 +1,5 @@
 const gameArea = document.getElementById("gameArea");
+const road = document.querySelector(".road");
 const playerCar = document.getElementById("playerCar");
 const distanceMeter = document.querySelector(".distanceMeter");
 const speedMeter = document.querySelector(".speedMeter");
@@ -12,10 +13,12 @@ let lastTimestamp = performance.now();
 
 
 const car = {
-  x: gameArea.offsetWidth / 2 - 25,
+  x: road.offsetWidth / 2 - 25,
   y: gameArea.offsetHeight - 120,
   moveSpeed: 5,
 };
+console.log(road.offsetWidth  , road.offsetHeight);
+
 const keys = {};
 const enemyCars = [];
 const enemyCarWidth = 30;
@@ -34,7 +37,7 @@ document.addEventListener("keyup", (e) => {
 
 function updateRoad() {
   roadPosition += roadSpeed;
-  gameArea.style.backgroundPositionY = `${roadPosition}px`;
+  gameArea.style.setProperty('--road-position', `${roadPosition}px`);
 }
 
 function createEnemyCar() {
@@ -122,10 +125,11 @@ function gameLoop(currentTimestamp) {
     roadSpeed = 0;
   }
   if (Math.random() < 0.01 && roadSpeed > 2) {
-    createEnemyCar();
+    // createEnemyCar();
   }
 
   requestAnimationFrame(gameLoop);
 }
 
 gameLoop();
+

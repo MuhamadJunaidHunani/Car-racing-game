@@ -1,14 +1,14 @@
 body {
   margin: 0;
-  overflow: hidden;
-  background: #333;
+  /* overflow: scroll; */
+  background: #01A02F;
 }
 .mainCont{
     display: flex;
     justify-content: space-evenly;
 }
 .controlCont{
-    display: flex;
+    display: none;
     flex-direction: column;
     margin: 20px;
 }
@@ -19,23 +19,35 @@ body {
     font-weight: 300;
     width: 130px;
 
+
 }
-#gameArea {
+#gameArea{
   position: relative;
-  width: 400px;
+  width: 100%;
   height: 100vh;
-  margin: 0 auto;
+  perspective: 1000px;
   overflow: hidden;
+}
+.road {
   background: url('./images/road.jpg') repeat-y; 
   background-size: contain;
-  transform: translate(-50%, -50%) rotateX(60deg);
+  background-position-y: var(--road-position, 0px);
+  content: '';
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotateX(90deg);
+  width: 20vw;
+  height: 300vh;
+  /* background: linear-gradient(to bottom, transparent, gray, transparent), Asphalt effect repeating-linear-gradient(to bottom, red 0%, white 20%, red 40%); */
+  /* background-repeat: no-repeat, repeat; */
 }
 
 .car {
   position: absolute;
-  width: 50px;
-  height: 100px;
-  background: url('./images/car.png') no-repeat center center / cover; 
+  width: 120px;
+  height: 70px;
+  background: url('gaari.png') no-repeat center center / cover; 
 }
 
 .enemy {
