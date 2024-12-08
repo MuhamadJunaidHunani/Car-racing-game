@@ -19,6 +19,8 @@
   <div id="gameArea">
     <div class="road">
     </div>
+    <div class="ene">
+    </div>
     <div id="playerCar" class="car"></div>
   </div>
 </div>
@@ -27,3 +29,60 @@
 </body>
 
 </html>
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Driving Animation</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      perspective: 1000px;
+      background-color: skyblue;
+
+    }
+    .road {
+      width: 500vh;
+      height: auto;
+      background-repeat: repeat-x;
+      background-size: contain;
+      position: relative;
+      display: flex;
+      left: -207px;
+      /* background-image: url('../../../Downloads/Screenshot_2024-12-01_181102-removebg-preview.png'); Replace with your image path */
+
+      transform: translate(10%, 7%) rotateY(81deg);
+      
+      /* animation: drive 5s linear infinite; */
+    }
+    .road div{
+      background-image: url('../../../Downloads/Screenshot_2024-12-01_174221-removebg-preview.png'); /* Replace with your image path */
+      width: 100%;
+      height: 300px;
+      background-size: cover;
+
+      /* position: absolute; */
+      
+    }
+
+    @keyframes drive {
+      from {
+        transform: translateX(0);
+      }
+      to {
+        transform: translateX(-50%);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="road">
+    <div class="A"></div>
+  </div>
+</body>
+</html> -->
+

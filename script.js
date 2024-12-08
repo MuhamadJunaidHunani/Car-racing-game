@@ -1,4 +1,5 @@
 const gameArea = document.getElementById("gameArea");
+const ene = document.querySelector(".ene");
 const road = document.querySelector(".road");
 const playerCar = document.getElementById("playerCar");
 const distanceMeter = document.querySelector(".distanceMeter");
@@ -46,7 +47,7 @@ function createEnemyCar() {
   enemyCar.classList.add("enemy");
   enemyCar.style.left = `${xPosition}px`;
   enemyCar.style.top = `-${enemyCarHeight + 200}px`;
-  gameArea.appendChild(enemyCar);
+  ene.appendChild(enemyCar);
   enemyCars.push({
     element: enemyCar,
     x: xPosition,
@@ -61,8 +62,8 @@ function updateEnemyCars() {
     enemyCar.element.style.top = `${enemyCar.y}px`;
 
   
-    if (enemyCar.y > gameArea.offsetHeight) {
-      gameArea.removeChild(enemyCar.element);
+    if (enemyCar.y > gameArea.offsetHeight*100) {
+      ene.removeChild(enemyCar.element);
       enemyCars.splice(index, 1);
     }
   });
@@ -125,7 +126,7 @@ function gameLoop(currentTimestamp) {
     roadSpeed = 0;
   }
   if (Math.random() < 0.01 && roadSpeed > 2) {
-    // createEnemyCar();
+    createEnemyCar();
   }
 
   requestAnimationFrame(gameLoop);
