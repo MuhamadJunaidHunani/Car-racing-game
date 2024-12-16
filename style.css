@@ -7,6 +7,7 @@ body {
     display: flex;
     justify-content: space-evenly;
 }
+
 .controlCont{
     display: none;
     flex-direction: column;
