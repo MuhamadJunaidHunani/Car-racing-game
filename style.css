@@ -13,7 +13,6 @@ body {
     flex-direction: column;
     margin: 20px;
 }
-
 .speedMeter , .distanceMeter{
     color: white;
     font-family: sans-serif;
