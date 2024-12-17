@@ -43,6 +43,7 @@ body {
   /* background: linear-gradient(to bottom, transparent, gray, transparent), Asphalt effect repeating-linear-gradient(to bottom, red 0%, white 20%, red 40%); */
   /* background-repeat: no-repeat, repeat; */
 }
+
 .ene{
   background: transparent repeat-y; 
   background-size: contain;
