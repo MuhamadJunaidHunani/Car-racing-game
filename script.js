@@ -114,7 +114,6 @@ function updateDistance(currentTimestamp) {
   distanceMeter.innerHTML = `${distance.toFixed(2)} m`;
 }
 
-
 function gameLoop(currentTimestamp) {
   updateDistance(currentTimestamp)
   adjustMovement();
