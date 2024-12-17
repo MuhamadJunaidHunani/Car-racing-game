@@ -24,6 +24,7 @@ body {
 
 
 }
+
 #gameArea{
   position: relative;
   width: 100%;
@@ -31,6 +32,7 @@ body {
   perspective: 1000px;
   overflow: hidden;
 }
+
 .road {
   background: url('./images/road.jpg') repeat-y; 
   background-size: contain;
@@ -43,7 +45,6 @@ body {
   width: 20vw;
   height: 300vh;
   /* background: linear-gradient(to bottom, transparent, gray, transparent), Asphalt effect repeating-linear-gradient(to bottom, red 0%, white 20%, red 40%); */
-  /* background-repeat: no-repeat, repeat; */
 }
 
 .ene{
