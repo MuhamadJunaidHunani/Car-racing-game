@@ -126,4 +126,3 @@ function gameLoop(currentTimestamp) {
 }
 
 gameLoop();
-
