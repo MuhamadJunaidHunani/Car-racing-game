@@ -17,12 +17,10 @@ const car = {
   y: gameArea.offsetHeight - 120,
   moveSpeed: 5,
 };
-
 const keys = {};
 const enemyCars = [];
 const enemyCarWidth = 30;
 const enemyCarHeight = 60;
-
 
 document.addEventListener("keydown", (e) => {
   keys[e.key] = true;
@@ -121,7 +119,6 @@ function gameLoop(currentTimestamp) {
   if (Math.random() < 0.01 && roadSpeed > 2) {
     createEnemyCar();
   }
-
   requestAnimationFrame(gameLoop);
 }
 
