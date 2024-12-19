@@ -12,13 +12,11 @@ let distance = 0;
 let roadPosition = 0;
 let lastTimestamp = performance.now();
 
-
 const car = {
   x: road.offsetWidth / 2 - 25,
   y: gameArea.offsetHeight - 120,
   moveSpeed: 5,
 };
-console.log(road.offsetWidth  , road.offsetHeight);
 
 const keys = {};
 const enemyCars = [];
@@ -33,8 +31,6 @@ document.addEventListener("keydown", (e) => {
 document.addEventListener("keyup", (e) => {
   keys[e.key] = false;
 });
-
-
 
 function updateRoad() {
   roadPosition += roadSpeed;
@@ -60,8 +56,6 @@ function updateEnemyCars() {
   enemyCars.forEach((enemyCar, index) => {
     enemyCar.y += roadSpeed;
     enemyCar.element.style.top = `${enemyCar.y}px`;
-
-  
     if (enemyCar.y > gameArea.offsetHeight*100) {
       ene.removeChild(enemyCar.element);
       enemyCars.splice(index, 1);
