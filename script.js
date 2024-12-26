@@ -114,7 +114,6 @@ function gameLoop(currentTimestamp) {
   updateRoad();
   updateEnemyCars();
 
-  
   if (checkCollision()) {
     roadSpeed = 0;
   }
