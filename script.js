@@ -36,7 +36,6 @@ function updateRoad() {
 }
 
 
-
 function createEnemyCar() {
   const xPosition = Math.random() * (gameArea.offsetWidth - enemyCarWidth);
   const enemyCar = document.createElement("div");
@@ -115,6 +114,7 @@ function gameLoop(currentTimestamp) {
   updateRoad();
   updateEnemyCars();
 
+  
   if (checkCollision()) {
     roadSpeed = 0;
   }
