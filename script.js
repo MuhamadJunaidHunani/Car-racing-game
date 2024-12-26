@@ -34,7 +34,6 @@ function updateRoad() {
   roadPosition += roadSpeed;
   gameArea.style.setProperty('--road-position', `${roadPosition}px`);
 }
-
 function createEnemyCar() {
   const xPosition = Math.random() * (gameArea.offsetWidth - enemyCarWidth);
   const enemyCar = document.createElement("div");
