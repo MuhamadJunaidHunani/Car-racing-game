@@ -5,7 +5,6 @@ const playerCar = document.getElementById("playerCar");
 const distanceMeter = document.querySelector(".distanceMeter");
 const speedMeter = document.querySelector(".speedMeter");
 
-
 let roadSpeed = 3;
 let maxSpeed = 30;
 let minSpeed = 3;
@@ -35,7 +34,6 @@ function updateRoad() {
   roadPosition += roadSpeed;
   gameArea.style.setProperty('--road-position', `${roadPosition}px`);
 }
-
 
 function createEnemyCar() {
   const xPosition = Math.random() * (gameArea.offsetWidth - enemyCarWidth);
