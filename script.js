@@ -17,6 +17,7 @@ const car = {
   y: gameArea.offsetHeight - 120,
   moveSpeed: 5,
 };
+
 const keys = {};
 const enemyCars = [];
 const enemyCarWidth = 30;
