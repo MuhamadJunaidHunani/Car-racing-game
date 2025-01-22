@@ -12,6 +12,7 @@ let distance = 0;
 let roadPosition = 0;
 let lastTimestamp = performance.now();
 
+
 const car = {
   x: road.offsetWidth / 2 - 25,
   y: gameArea.offsetHeight - 120,
